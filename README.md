@@ -61,7 +61,7 @@ v2 run examples/bayes/bayes.py
 Running on Bayes will produce the following Dockerfile.
 
 ```dockerfile
-FROM python:3.7
+FROM python:3.8
 COPY . /app
 RUN ["apt-get","update"]
 RUN ["pip","install","the==0.1.5"]
@@ -126,7 +126,7 @@ in the gist. However, two instances of configuration drift are still found.
                         "status_code": "Exception",
                         "exception_name": "ModuleNotFoundError",
                         "exception_message": "No module named 'tensorflow'",
-                        "exception_file_name": "/usr/local/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py",
+                        "exception_file_name": "/usr/local/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py",
                         "exception_line_number": 5,
                         "exception_line": "import tensorflow as tf",
                         "exception_stack": [
@@ -137,31 +137,31 @@ in the gist. However, two instances of configuration drift are still found.
                                 "from keras.preprocessing import sequence, text"
                             ],
                             [
-                                "/usr/local/lib/python3.7/site-packages/keras/__init__.py",
+                                "/usr/local/lib/python3.8/site-packages/keras/__init__.py",
                                 3,
                                 "<module>",
                                 "from . import utils"
                             ],
                             [
-                                "/usr/local/lib/python3.7/site-packages/keras/utils/__init__.py",
+                                "/usr/local/lib/python3.8/site-packages/keras/utils/__init__.py",
                                 6,
                                 "<module>",
                                 "from . import conv_utils"
                             ],
                             [
-                                "/usr/local/lib/python3.7/site-packages/keras/utils/conv_utils.py",
+                                "/usr/local/lib/python3.8/site-packages/keras/utils/conv_utils.py",
                                 9,
                                 "<module>",
                                 "from .. import backend as K"
                             ],
                             [
-                                "/usr/local/lib/python3.7/site-packages/keras/backend/__init__.py",
+                                "/usr/local/lib/python3.8/site-packages/keras/backend/__init__.py",
                                 89,
                                 "<module>",
                                 "from .tensorflow_backend import *"
                             ],
                             [
-                                "/usr/local/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py",
+                                "/usr/local/lib/python3.8/site-packages/keras/backend/tensorflow_backend.py",
                                 5,
                                 "<module>",
                                 "import tensorflow as tf"
