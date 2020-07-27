@@ -9,6 +9,7 @@ V2 detects and repairs instances of configuration drift in Python snippets.
 | Node.js        | 12.1.0  |
 | Docker         | 18.09.2 |
 | Docker Compose | 1.23.2  |
+| Redis Server   | 5.0.7   |
 
 ## Setup
 
