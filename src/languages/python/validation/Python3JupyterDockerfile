@@ -19,3 +19,4 @@ COPY exception_handler.py /root/.ipython/extensions/exception_handler.py
 COPY validate.py /scripts/validate.py
 
 ENTRYPOINT ["python", "/scripts/validate.py"]
+

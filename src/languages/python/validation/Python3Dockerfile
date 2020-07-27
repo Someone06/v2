@@ -12,3 +12,4 @@ RUN /proxy-scripts/pypi-proxy.sh 3141
 COPY validate.py /scripts/validate.py
 
 ENTRYPOINT ["python", "/scripts/validate.py"]
+

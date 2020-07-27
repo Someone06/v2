@@ -3,3 +3,4 @@ FROM python:3.8
 COPY parse.py visitor.py /scripts/
 
 ENTRYPOINT ["python", "/scripts/parse.py"]
+
