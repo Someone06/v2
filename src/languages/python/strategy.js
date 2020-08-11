@@ -25,7 +25,7 @@ const IMPORT_ERRORS            = ['ImportError', 'ModuleNotFoundError'];
 // Docker images
 const PYTHON2_PARSE            = 'localhost:5000/v2/python2-parse:latest';
 const PYTHON3_PARSE            = 'localhost:5000/v2/python3-parse:latest';
-const PARSERS                  = [PYTHON3_PARSE, PYTHON2_PARSE];
+const PARSERS                  = [PYTHON3_PARSE];
 const PYTHON2_VALIDATE         = 'localhost:5000/v2/python2-validate:latest';
 const PYTHON3_VALIDATE         = 'localhost:5000/v2/python3-validate:latest';
 const PYTHON2_JUPYTER_VALIDATE = 'localhost:5000/v2/python2-jupyter-validate:latest';
