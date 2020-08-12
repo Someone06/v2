@@ -102,8 +102,11 @@ class DockerTools {
         // Join arguments for a full arguments string
         let argsString = args.join(' ');
 
+        logger.info(`Projectdir: ${metadata.projectdir}`);
+        logger.info(`Environment: ${metadata.environment}`);
+
         // Generate the docker run command
-        let cmd = `docker run --rm ${argsString} ${image} ${command}`;
+        let cmd = `docker run -e ${metadata.environment} -v ${metadata.projectdir}:/mnt/projectdir --rm ${argsString} ${image} ${command}`;
         logger.info(`Docker run command: ${cmd}`);
 
         // Run

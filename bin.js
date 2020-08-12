@@ -112,6 +112,18 @@ let argv = yargs
                 default: false,
             });
 
+            yargs.option('projectdir', {
+                type: 'string',
+                describe: 'Base source code directory of the project',
+                default: '.'
+            });
+
+            yargs.option('environment', {
+                type: 'string',
+                describe: 'environment variable to set',
+                default: ''
+            });
+
             yargs.positional('package', {
                 type: 'string',
                 describe: 'Path to the code package to be dockerized. Can be relative to cwd.',
@@ -141,6 +153,8 @@ let argv = yargs
             let only = argv.only;
             let pkg = argv.package;
             let format = argv.format;
+            let projectdir = argv.projectdir;
+            let environment = argv.environment;
 
             // Create v2 with consul options, if any
             let v2 = new V2(_.omitBy({
@@ -157,6 +171,8 @@ let argv = yargs
                 format,
                 only,
                 noValidate: argv.noValidate,
+                projectdir,
+                environment,
             }, _.isUndefined));
 
             // Print

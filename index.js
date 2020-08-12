@@ -632,6 +632,9 @@ class V2 {
         metadata.path = path.resolve(options.pkg);
         metadata.basename = path.basename(metadata.path);
         metadata.isDir = fs.statSync(metadata.path).isDirectory();
+        metadata.projectdir = options.projectdir;
+        metadata.environment = options.environment;
+	
 
         // Log
         logger.info('Inference metadata: ', metadata);

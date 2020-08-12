@@ -16,6 +16,8 @@
  * @property {String}  path     The resolved absolute path to the codebase.
  * @property {String}  basename The basename of the codebase path. Either a code file or directory.
  * @property {Boolean} isDir    True if path points to a directory.
+ * @property {String}  projectdir Path to the the base project directory.
+ * @property {String}  environmemt A enviroment varriable to set in the docker container.
  */
 class Metadata {}
 
