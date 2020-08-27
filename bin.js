@@ -124,6 +124,12 @@ let argv = yargs
                 default: ''
             });
 
+            yargs.option('exclude', {
+                type: 'string',
+                describe: 'Pip package to exculde from dependency search',
+                default: ''
+            });
+
             yargs.positional('package', {
                 type: 'string',
                 describe: 'Path to the code package to be dockerized. Can be relative to cwd.',
@@ -155,6 +161,7 @@ let argv = yargs
             let format = argv.format;
             let projectdir = argv.projectdir;
             let environment = argv.environment;
+            let exclude = argv.exclude
 
             // Create v2 with consul options, if any
             let v2 = new V2(_.omitBy({
@@ -173,6 +180,7 @@ let argv = yargs
                 noValidate: argv.noValidate,
                 projectdir,
                 environment,
+                exclude
             }, _.isUndefined));
 
             // Print

@@ -18,6 +18,7 @@
  * @property {Boolean} isDir    True if path points to a directory.
  * @property {String}  projectdir Path to the the base project directory.
  * @property {String}  environmemt A enviroment varriable to set in the docker container.
+ * @property {String}  exclude A pip package to exclude from search
  */
 class Metadata {}
 

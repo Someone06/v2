@@ -16,6 +16,7 @@ const cache          = require('../../cache');
 const dockerTools    = require('../../docker-tools');
 const logger         = require('../../logger');
 const SystemStrategy = require('../system-strategy');
+const metadata       = require('../../metadata');
 
 
 // Constants
@@ -36,6 +37,10 @@ class PIPStrategy extends SystemStrategy {
      * @returns {Promise<Object>}     Package definition.
      */
     async getPackageDefinition(pkg) {
+
+        if (metadata.exclude.localeCompare(pkg) === 0) {
+            return null;
+        }
 
         // Use Bluebird.using to properly close connection after finish.
         return Bluebird.using(cache.getClientFor('pip'), async (redis) => {
