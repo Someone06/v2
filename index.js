@@ -634,7 +634,7 @@ class V2 {
         metadata.isDir = fs.statSync(metadata.path).isDirectory();
         metadata.projectdir = options.projectdir;
         metadata.environment = options.environment;
-	
+        metadata.exclude = options.exclude;
 
         // Log
         logger.info('Inference metadata: ', metadata);

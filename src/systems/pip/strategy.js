@@ -38,7 +38,7 @@ class PIPStrategy extends SystemStrategy {
      */
     async getPackageDefinition(pkg) {
 
-        if (metadata.exclude.localeCompare(pkg) === 0) {
+        if (metadata.exclude === pkg) {
             return null;
         }
 
