@@ -1,5 +1,5 @@
 # Use Debian stretch (Debian 9) as the base. The Python docker image is also based off of Debian.
-FROM debian:stretch-slim
+FROM debian:buster-slim
 
 
 # Add versions script
